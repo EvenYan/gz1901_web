@@ -22,7 +22,7 @@ def index(request, page_num):
     page_list = page.object_list
     page_range = paginator.page_range
     print(post_list)
-    context = {"page_list": page_list, "page_range": page_range}
+    context = {"page_list": page_list, "page_range": page_range, "page": page}
     return render(request, "index.html", context)
 
 
