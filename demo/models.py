@@ -42,3 +42,29 @@ class Grade(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class People(models.Model):
+    name = models.CharField(max_length=100)
+
+
+class IDCard(models.Model):
+    id_num = models.CharField(max_length=18)
+    people = models.OneToOneField(People, on_delete=models.PROTECT)
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50)
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=50, verbose_name="标题")
+    body = models.TextField(verbose_name="内容")
+    tags = models.ManyToManyField(Tag)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "文章"
+        verbose_name_plural = "文章"
