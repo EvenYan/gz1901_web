@@ -5,6 +5,7 @@ from django.db import models
 class PostManager(models.Manager):
     def title_content(self, kv):
         return self.filter(title__contains=kv)
+    
     def get_queryset(self):
         return super().get_queryset().filter(is_delete=0)
 

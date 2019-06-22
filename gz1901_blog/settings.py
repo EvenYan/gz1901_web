@@ -25,7 +25,7 @@ SECRET_KEY = '0*$45p-2#^28jit!o5vq$3@ie9fh#nma(lb=%0um!gzrx2omk6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", ]
 
 
 # Application definition
@@ -49,6 +49,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'blog.middleware.MyMiddleware1',
+    'blog.middleware.MyMiddleware2',
+    'blog.middleware.BlockIPMiddleware',
 ]
 
 ROOT_URLCONF = 'gz1901_blog.urls'
