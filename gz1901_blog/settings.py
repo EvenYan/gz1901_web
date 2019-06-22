@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'gz1901_blog.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE':'django.db.backends.mysql',
-		'NAME':'gz1901_blog',
+		'NAME':'gz1901_web',
 		'USER':'root',
 		'PASSWORD':'root',
 		'HOST':'127.0.0.1',

@@ -15,5 +15,15 @@
       <user-name>root</user-name>
       <introspection-schemas>*:gz1901_blog</introspection-schemas>
     </data-source>
+    <data-source name="gz1901_web@localhost" uuid="4c0dbaa4-d7c5-4a1d-8e5e-690b503cb4e9">
+      <database-info product="MySQL" version="5.7.23-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.47 ( Revision: fe1903b1ecb4a96a917f7ed3190d80c049b1de29 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:gz1901_web</introspection-schemas>
+    </data-source>
   </component>
 </project>
