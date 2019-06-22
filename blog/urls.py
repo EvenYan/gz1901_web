@@ -19,10 +19,11 @@ from blog import views
 
 urlpatterns = [
     url(r'^post/(?P<pk>\d+)', views.post, name="post"),
-    url(r'^index', views.index, name="index"),
+    url(r'^index/(\d+)', views.index, name="index"),
     url(r'^new_post', views.new_post, name="new_post"),
     url(r'^save_post', views.save_post, name="save_post"),
     url(r'^get_para', views.get_para, name="get_para"),
     url(r'^ret_response', views.ret_response, name="ret_response"),
     url(r'^to_post', views.to_other_url, name="to_post"),
+    url(r'^gen_post', views.gen_post, name="gen_post"),
 ]

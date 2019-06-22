@@ -6,14 +6,13 @@
 </head>
 <body>
 
-欢迎来到我的首页！
-<ul>
-    {% for post in post_list %}
-        <li><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+{% for post in page_list %}
+    <li><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></li>
+{% endfor %}
 
-<a href="{% url 'blog:new_post' %}">写博客</a>
+{% for i in page_range %}
+    <a href="{% url 'blog:index' i %}">{{ i }}</a>
 
+{% endfor %}
 </body>
 </html>
