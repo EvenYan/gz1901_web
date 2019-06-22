@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+欢迎来到我的首页！
+<ul>
+    {% for post in post_list %}
+        <li><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'blog:new_post' %}">写博客</a>
+
+</body>
+</html>

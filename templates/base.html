@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evenの小窝</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/pace.css' %}">
+    <link rel="stylesheet" href="{% static '' %}">
+
+
+    <!-- js -->
+    <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+</head>
+
+<body>
+<div class="container">
+    <header id="site-header">
+        <div class="row">
+            <div class="col-md-4 col-sm-5 col-xs-8">
+                <div class="logo">
+                    <h1><a href="index.html"><b>Evenの小窝</b></a></h1>
+                </div>
+            </div><!-- col-md-4 -->
+            <div class="col-md-8 col-sm-7 col-xs-4">
+                {% include 'nav.html' %}
+                <div id="header-search-box">
+                    <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
+                    <div id="search-form" class="search-form">
+                        <form role="search" method="get" id="searchform" action="#">
+                            <input type="search" placeholder="搜索" required>
+                            <button type="submit"><span class="ion-ios-search-strong"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- col-md-8 -->
+        </div>
+    </header>
+</div>
+<div class="copyrights">Collect from <a href="http://www.evenyan.com/">网页模板</a></div>
+<div class="copyrights">Modified by <a href="http://www.evenyan.com/">Even的博客</a></div>
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            {% block main %}
+            
+            {% endblock %}
+        {% block aside %}
+        
+        {% endblock %}
+        </div>
+    </div>
+</div>
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="copyright">&copy 2017 - 采集自<a href="http://www.evenyan.com/"
+                                                        target="_blank" title="博客模板">我的博客模板</a>
+                    - 由<a href="http://www.evenyan.com/" title="博客模板" target="_blank">我的博客</a>修改
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Menu -->
+<div class="overlay overlay-hugeinc">
+    <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="full-width.html">博客</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="contact.html">联系</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
