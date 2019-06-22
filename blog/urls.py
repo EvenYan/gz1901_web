@@ -17,6 +17,7 @@ from django.conf.urls import url
 
 from blog import views
 
+
 urlpatterns = [
     url(r'^post/(?P<pk>\d+)', views.post, name="post"),
     url(r'^index/(\d+)', views.index, name="index"),
