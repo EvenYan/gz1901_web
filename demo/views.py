@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 
+from demo.forms import RegisterForm
 from demo.models import UserInfo
 
 
@@ -63,3 +64,19 @@ def register(request):
         user.save()
         return redirect(reverse("demo:login"))
     return HttpResponse("两次密码不一致，请重新注册！")
+
+
+def register_form(request):
+    form = RegisterForm()
+    return render(request, 'demo/forms.html', context={"form": form})
+
+
+def userinfo(request):
+    data = request.POST
+    form_data = RegisterForm(data)
+    print(data.get("username"))
+    print(data.get("passwd"))
+    print(data)
+    if form_data.is_valid():
+        return HttpResponse("验证码正确")
+    return HttpResponse("请重新输入验证码！")

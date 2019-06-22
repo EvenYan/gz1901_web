@@ -23,4 +23,6 @@ urlpatterns = [
     url(r'^register/', views.register, name="register"),
     url(r'^home/', views.home, name="home"),
     url(r'^homepage', views.homepage, name="homepage"),
+    url(r'^register_form', views.register_form, name="register_form"),
+    url(r'^userinfo', views.userinfo, name="userinfo"),
 ]
