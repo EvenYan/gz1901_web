@@ -50,9 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'blog.middleware.MyMiddleware1',
-    'blog.middleware.MyMiddleware2',
-    'blog.middleware.BlockIPMiddleware',
+    # 'blog.middleware.MyMiddleware1',
+    # 'blog.middleware.MyMiddleware2',
+    # 'blog.middleware.BlockIPMiddleware',
 ]
 
 ROOT_URLCONF = 'gz1901_blog.urls'
